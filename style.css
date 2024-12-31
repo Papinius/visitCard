@@ -3,8 +3,8 @@
 body {
     display: flex;
     justify-content: center;
-    background: linear-gradient(to bottom, rgba(49, 58, 84, 0.8) 10%, rgba(40, 57, 104, 0.8) 70%, rgba(49, 58, 84, 0.8) 90%), 
-                url("fond.jpg") no-repeat center center;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+    url("fond.jpg") no-repeat center center;
     margin: 0 auto;
     background-size: cover;
     width: 100vw;
@@ -17,7 +17,7 @@ header {
     margin: 25px 0 0 0;
     text-align: center;
     color: #F5F5F5;
-    font-family: poppins sans-serif;
+    font-family: poppins, arial, sans-serif;
 }
 main {
     position: relative;
@@ -27,33 +27,48 @@ h1 {
     font-size: 36px;
 }
 .présentation {
-    margin-top: 125px;
-    margin-bottom: 50px;
+    padding: 20% 0 0 0;
     text-align: center;
     color: #F5F5F5;
+    font-family: roboto, arial, sans-serif;
 }
+@media (max-width: 768px) {
+    .présentation 
+        padding: 10% 0 0 0;
+    }
 .acroche{
     margin-top: 170px;
-}
+} 
 footer {
+    position: absolute;
+    bottom: 0;
     display: flex;
-    justify-content: flex-start;
-    width: 100%;
-    display: flex;
-     /* Espace équitable entre les sections */
+    justify-content: space-around;
+    width: 100%;    /* Espace équitable entre les sections */
     align-items: center; /* Aligne verticalement les icônes et le texte */
     color: #F5F5F5;
     padding: 10px 0;
-    margin-top: 50px;
+    background-color: rgba(0, 0, 0, 0.2); /* Optionnel pour un effet visuel */
+}
+@media (max-width: 768px) {
+    .mail, .site {
+        flex-direction: column; /* Aligne les éléments verticalement sur mobile */
+        gap: 20px;
+    }
+    footer {
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px;
+    }
 }
 .mail, .site {
     display: flex;
     align-items: center; /* Aligne verticalement les icônes et le texte */
-    gap: 50px; /* Espace entre l'icône et le texte */
-    margin: 15px 15px 0 15px;
+    gap: 15px; /* Espace entre l'icône et le texte */
+    
 }
 .enveloppe, .internet {
-    width: 40px;
+    width: 2.5rem;
     height: auto;
 }
 .lien {
